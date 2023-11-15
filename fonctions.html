@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        On crée un nombre aléatoire entre 0 et 10, ensuite on demandera à l'utilisateur de deviner ce nombre avec 3 essais. Pour créer la logique on utilisera des fonctions spécifiques.
+
+        Une fonction isRight(n) qui renverra un booléen si l'utilisateur à la bonne réponse ou non
+        Une fonction guess() qui permet de faire un essai, cette fonction renverra true ou false en fonction de la réponse donnée.
+
+        Voici le début du code
+
+        const solution = Math.floor(Math.random() * 11)
+        */
+
+        const solution = Math.floor(Math.random() * 11);
+        console.log(solution);
+
+        let deviner = "Tu as 3 essais pour découvrir le nombre mystère";
+        console.log(deviner);
+
+        function isRight(deviner){
+            if(deviner === solution){
+                return true
+            } 
+        }
+        console.log(isRight(8));
+
+        function guess(){
+            i = 0;
+            while(i < 3){
+                
+                i++;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // Pour cet exercice on demandera à l'utilisateur (à l'aide de prompt) un nombre à l'utilisateur entre 0 et 10, on affichera ensuite tous les nombres sous le nombre indiqué par l'utilisateur (s'il rentre 4, on affichera 4, 3, 2, 1, 0). Si l'utilisateur rentre un chiffre erroné on affichera un message d'erreur.
+
+        /* 
+        let chiffre = prompt("Choisissez un chiffre entre 0 et 10");
+        if(chiffre < 0 || chiffre > 10){
+            console.log("Votre chiffre n'est pas compris entre 0 et 10");
+            console.log(chiffre);
+        } else {
+            for(i = chiffre; i > 0; i--){
+                console.log(i);
+            }
+        } 
+        */
+
+
+        // On créera une variable guess qui contiendra un nombre entre 0 et 10, l'objectif sera ensuite de faire deviner ce chiffre à l'utilisateur. Si l'utilisateur se trompe on lui donnera une indication "plus" ou "moins" pour l'orienter vers la bonne réponse.
+
+        /* 
+        const toGuess = Math.floor(Math.random() * 10);
+        console.log(toGuess);
+
+        while (true){
+            const userChoice = prompt("Choisissez un chiffre entre 0 et 10") * 1;
+            if (userChoice < 0 || userChoice > 10){
+                console.log("Choix incorrect");
+            } else if (userChoice < toGuess) {
+                console.log("C'est plus!");
+            } else if (userChoice > toGuess) {
+                console.log("C'est moins!");
+            } else {
+                break;
+            }
+        }
+        console.log("Bravo!");
+        */
+
+        // for ... in
+        /*
+        const object = {
+            a: 1,
+            b: 2,
+            c: 3,
+            parachute: "ouvert"
+        };
+
+        for (const property in object) {
+            console.log(property) // affichera alternativement : a, b, c
+        }
+        */
+
+        const object = {
+            a: 1,
+            b: 2,
+            c: 3,
+            parachute: "ouvert"
+        };
+
+        for (const property of object) {
+            console.log(property) // affichera alternativement : a, b, c
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
