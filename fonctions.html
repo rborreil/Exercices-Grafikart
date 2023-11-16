@@ -7,6 +7,7 @@
     <title>Document</title>
     <script>
         /* 
+        EXO DEVINER LE NOMBRE
         On crée un nombre aléatoire entre 0 et 10, ensuite on demandera à l'utilisateur de deviner ce nombre avec 3 essais. Pour créer la logique on utilisera des fonctions spécifiques.
 
         Une fonction isRight(n) qui renverra un booléen si l'utilisateur à la bonne réponse ou non
@@ -17,24 +18,110 @@
         const solution = Math.floor(Math.random() * 11)
         */
 
+        /*
+        TESTS
         const solution = Math.floor(Math.random() * 11);
         console.log(solution);
 
         let deviner = "Tu as 3 essais pour découvrir le nombre mystère";
         console.log(deviner);
 
-        function isRight(deviner){
-            if(deviner === solution){
+        function isRight(deviner) {
+            if (deviner === solution) {
                 return true
-            } 
+            }
         }
         console.log(isRight(8));
 
-        function guess(){
+        function guess() {
             i = 0;
-            while(i < 3){
-                
+            while (i < 3) {
+
                 i++;
+            }
+        }
+        */
+
+        // FONCTION CLASSIQUE
+        function disBonjour(prénom, nom, météo, accessoire) {
+            return "Bonjour " + prénom + " " + nom + ", aujourd'hui le temps est " + météo + ", prenez donc un " +
+                accessoire
+        }
+
+        // console.log(disBonjour("Robin", "Borreil", "ensoleillé", "chapeau"));
+
+        // FONCTION STOCKEE DANS UNE VARIABLE
+        const disHello = function (prénom, nom, âge = 100) {
+            return "Hello " + prénom + " " + nom + ", vous avez " + âge + " ans"
+        }
+        // console.log(disHello("Wooden", "Eye"));
+
+        // PORTEE DES FONCTIONS
+        function a() {
+            console.log("a");
+
+            function b() {
+                console.log("b")
+            }
+        }
+        // a();
+        // b();
+
+        // THIS
+        function maFonction() {
+            console.log(this);
+        }
+
+        // maFonction.call("maratchoukinoataaa");
+        // console.log("maratchoukinoataaa"[4]);
+
+        const x = {
+            prop: 42,
+            func: function () {
+                return this.prop;
+            },
+        };
+        // console.log(x.func());
+
+        //FONCTIONS FLECHEES
+        const hola = (apellido) => {
+            return `Holà ${apellido}`
+        }
+        // console.log(hola("Robinio"));
+
+        const salut = () => {
+            console.log(this);
+        }
+        // salut();
+        // salut.call("alors");
+
+        const double = (n) => {
+            return 2 * n
+        }
+        const double1 = (n) => 2 * n;
+        const double2 = n => 2 * n;
+        // console.log(double2(5));
+
+        const solution = Math.floor(Math.random() * 11);
+
+        function isRight(n) {
+            return solution === n
+        }
+
+        function guess() {
+            const nb = "Entrez un nombre" * 1;
+            return isRight(nb);
+        }
+
+        for (i = 0; i < 3; i++) {
+            if (guess()) {
+                console.log("Bravo");
+                break
+            } else {
+                console.log("Il vous reste " + (3 - i) + " essai(s)");
+                if (i === 2) {
+                    console.log("Vous avez perdu !")
+                }
             }
         }
     </script>
